@@ -15,9 +15,6 @@ $pid = $_GET['pid'];
   $lname = $_GET['lname'];
   $appdate = $_GET['appdate'];
   $apptime = $_GET['apptime'];
-}
-
-
 
 if(isset($_POST['prescribe']) && isset($_POST['pid']) && isset($_POST['ID']) && isset($_POST['appdate']) && isset($_POST['apptime']) && isset($_POST['lname']) && isset($_POST['fname'])){
   $appdate = $_POST['appdate'];
@@ -112,25 +109,25 @@ if(isset($_POST['prescribe']) && isset($_POST['pid']) && isset($_POST['ID']) && 
 
 <body style="padding-top:50px;">
    <div class="container-fluid" style="margin-top:50px;">
-    <h3 style = "margin-left: 40%;  padding-bottom: 20px; font-family: 'IBM Plex Sans', sans-serif;"> Welcome &nbsp<?php echo $doctor ?>
+    <h3 style = "margin-left: 40%;  padding-bottom: 10px; font-family: 'IBM Plex Sans', sans-serif;"> Welcome &nbsp<?php echo $doctor ?>
    </h3>
 
    <div class="tab-pane" id="list-pres" role="tabpanel" aria-labelledby="list-pres-list">
         <form class="form-group" name="prescribeform" method="post" action="prescribe.php">
         
           <div class="row">
-                  <div class="col-md-4"><label>Disease:</label></div>
+                  <div class="col-md-4"><label>Penyakit:</label></div>
                   <div class="col-md-8">
                   <!-- <input type="text" class="form-control" name="disease" required> -->
                   <textarea id="disease" cols="86" rows ="5" name="disease" required></textarea>
                   </div><br><br><br>
                   
-                  <div class="col-md-4"><label>Allergies:</label></div>
+                  <div class="col-md-4"><label>Alergi:</label></div>
                   <div class="col-md-8">
                   <!-- <input type="text"  class="form-control" name="allergy" required> -->
                   <textarea id="allergy" cols="86" rows ="5" name="allergy" required></textarea>
                   </div><br><br><br>
-                  <div class="col-md-4"><label>Prescription:</label></div>
+                  <div class="col-md-4"><label>Resep Dokter:</label></div>
                   <div class="col-md-8">
                   <!-- <input type="text" class="form-control"  name="prescription"  required> -->
                   <textarea id="prescription" cols="86" rows ="10" name="prescription" required></textarea>
